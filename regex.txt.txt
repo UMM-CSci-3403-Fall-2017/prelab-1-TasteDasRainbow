@@ -1,0 +1,16 @@
+#0:
+\w+
+
+#1
+[\w]+(?=\.)
+//Captures words where a period immediately follows
+
+(?=[A-Z]+[\w])(([\w]+(?=\.)))
+//Using logical grouping, this does the same but only when there is a capital letter in the input 
+//For some reason using the grouping is not working properly with the conditional or an operator, as it will not capture the final word as well. 
+
+
+#2
+
+[\w]+\.+.*
+//captures the first word next to a period and every character following it
